@@ -12,6 +12,12 @@ Give execution permissions to logparser.py if needed:
 
 `sudo chmod 744 logparser.py`
 
+You need to have installed in your environment the following Python 3.6 libraries:
+* Pandas
+* Schedule
+* Time
+* Argparse
+
 ## How to use it:
 This scripts can be run in two modes:
 
