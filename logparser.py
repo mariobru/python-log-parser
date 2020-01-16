@@ -7,8 +7,8 @@ import argparse
 def recibeConfig():
     parser = argparse.ArgumentParser(description='This is a log parser. It receives text files with three columns separated by a blank space. The first column is a Unix timestamp, the second one is the hostname that opens the connection and the third one the hostname that receives it. You can run the range mode for a saved log or the hourly mode for live written log.')
     group = parser.add_mutually_exclusive_group()
-    group.add_argument('-r', '--range', action='store_true', help='Enables range mode. Given a filename, an init datetime, end datetime and hostname return a list of hostnames connected to the given host during that period of time.')
-    group.add_argument('-u', '--unlimited', action='store_true', help='Enables unlimited mode. You must input filename, server and client and the script will output hourly a list of hostnames connected to the given server during the last hour, a list of hostnames that received connections from a given client during the last hour, the hostname that generated most connections in the last hour.')
+    group.add_argument('-r', '--range', action='store_true', help='Enables range mode. Given a filename with its path, an init datetime, end datetime and hostname return a list of hostnames connected to the given host during that period of time.')
+    group.add_argument('-u', '--unlimited', action='store_true', help='Enables unlimited mode. You must input filename with its path, server and client and the script will output hourly a list of hostnames connected to the given server during the last hour, a list of hostnames that received connections from a given client during the last hour, the hostname that generated most connections in the last hour.')
     parser.add_argument('-f', '--filename', help='Input the filename of the log you want to parse with its absolute path.')
     parser.add_argument('-i', '--init', type=int, help='Input the init Unix timestamp.')
     parser.add_argument('-e', '--end', type=int, help='Input the end Unix timestamp.')
